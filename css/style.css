@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #e9edf2;
+}
+
+.cv {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  background: white;
+}
+
+.left {
+  width: 35%;
+  background: #23364a;
+  color: white;
+  padding: 25px;
+}
+
+.right {
+  width: 65%;
+  padding: 30px;
+}
+
+.photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 5px;
+  color: #23364a;
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #555;
+}
+
+h3 {
+  margin-top: 25px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #23364a;
+}
+
+.left h3 {
+  border-color: white;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 18px;
+  background: #23364a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.download-btn:hover {
+  background: #1a2a3b;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.progress {
+  background: #ddd;
+  height: 7px;
+  border-radius: 4px;
+}
+
+.progress div {
+  background: #23364a;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* Animations discrètes */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cv {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+  }
+}
+
+.social {
+  margin-bottom: 25px;
+}
+
+.social a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 14px;
+  background: #23364a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.social a:hover {
+  background: #1a2a3b;
+}
+
+.logo {
+  width: 250px;      /* taille du logo */
+  height: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
